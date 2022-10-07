@@ -1,0 +1,387 @@
+/* ---------------------------------- */
+/* -------------HELPERS-------------- */
+/* ---------------------------------- */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ---------------------------------- */
+/* -------------LAYOUT--------------- */
+/* ---------------------------------- */
+.full-height {
+  min-height: 100vh;
+}
+
+/* ---------------------------------- */
+/* -------------ASTRONAUT------------ */
+/* ---------------------------------- */
+.astronaut {
+  background-image: url(/Style/Images/astronaut.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.astronaut .heading-box {
+  border: 4px solid black;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  padding: 20px;
+  font-family: "Rubik", sans-serif;
+}
+
+.astronaut .heading-box .text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+/* ---------------------------------- */
+/* -------------DESKTOP-------------- */
+/* ---------------------------------- */
+@media screen and (min-width: 600px) {
+  .astronaut .heading-box {
+    width: 15rem;
+  }
+  .astronaut .heading-box .link {
+    text-align: right;
+  }
+  .astronaut .heading-box .link span {
+    position: relative;
+    left: 0px;
+    transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .astronaut .heading-box .link:hover span {
+    left: 10px;
+  }
+}
+/*----------------------------------- */
+/* -------------STARS-----------------*/
+/* ---------------------------------- */
+.text-page {
+  background: rgba(0, 0, 0, 0.7) url(/Style/Images/Galaxy.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-blend-mode: darken;
+  position: relative;
+  overflow: hidden;
+}
+
+.brown {
+  margin-bottom: -90px;
+}
+
+.space-ventures {
+  margin-top: -70px;
+  margin-left: 0px;
+}
+.space-ventures h2 span:first-of-type {
+  display: block;
+  position: relative;
+  left: 32px;
+  color: white;
+  font-size: 75px;
+  z-index: 1;
+  font-family: "rubik";
+  margin-top: 90px;
+}
+.space-ventures h2 span:nth-of-type(2) {
+  position: relative;
+  font-weight: bold;
+  top: -51px;
+  left: 35px;
+  color: rgb(148, 148, 148);
+  font-size: 100px;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 0;
+  margin-top: 50px;
+}
+
+.blockquote {
+  padding: 0px;
+  margin: 20px;
+  color: white;
+  position: relative;
+  display: inline;
+}
+.blockquote::before, .blockquote::after {
+  content: '"';
+  display: block;
+  position: absolute;
+  font-size: 3rem;
+}
+.blockquote::before {
+  top: -3px;
+  left: -3px;
+}
+.blockquote::after {
+  bottom: -3px;
+  left: -3px;
+}
+
+.quote-text {
+  color: white;
+  font-family: "rubik";
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 20px;
+  position: relative;
+  left: 50px;
+}
+
+/* Page-1 Ground control */
+.purple {
+  font-family: "rubik";
+  color: white;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 25px;
+  margin-left: 40px;
+  line-height: 25px;
+}
+.purple h2 {
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 50px;
+}
+
+.yellow {
+  /* outline: 3px solid yellow; */
+  color: white;
+}
+
+.red {
+  /* outline: 3px solid red; */
+  color: white;
+}
+
+.blue {
+  /* outline: 3px solid blue; */
+  color: white;
+}
+
+/* Page-2 "Am i sitting in a tin can" */
+.blue-clearfix {
+  color: white;
+  font-family: "rubik";
+  line-height: 19px;
+  text-align: left;
+  position: relative;
+  font-weight: lighter;
+  font-size: 17px;
+  left: 0px;
+  margin-left: 40px;
+}
+
+/* ---------------------------------- */
+/* -------------COOKIE-------------- */
+/* ---------------------------------- */
+.cookie {
+  display: none;
+}
+
+.accept {
+  display: none;
+}
+
+.major-tom {
+  display: none;
+}
+
+.read-more {
+  color: rgb(203, 5, 111);
+  text-decoration: underline;
+  font-style: bolder;
+  font-size: 17px;
+}
+
+/* ---------------------------------- */
+/* -------------DESKTOP-------------- */
+/* ---------------------------------- */
+@media screen and (min-width: 800px) {
+  .full-height {
+    display: flex;
+    gap: 100px;
+  }
+  .brown,
+.grey {
+    width: 50%;
+  }
+  .blue-clearfix {
+    position: relative;
+    padding-right: 70px;
+    padding-left: 70px;
+    text-align: left;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: -50px;
+    margin-left: 90px;
+    line-height: 25px;
+  }
+  /* Page-2 QUOTE */
+  .gradient-quote {
+    display: block;
+    font-family: "rubik";
+    font-size: 40px;
+    color: #fa08de;
+    background-image: -webkit-linear-gradient(45deg, #cc1db8 0%, #e8ea63 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-left: -5px;
+    font-weight: lighter;
+    text-align: left;
+    opacity: 0.6;
+    padding: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: "rubik";
+    font-style: italic;
+  }
+  /* Page-2 Major Tom */
+  .major-tom {
+    display: block;
+    width: 100px;
+    height: auto;
+    float: right;
+    transform: rotate(3deg);
+    margin-right: 90px;
+    margin-top: -40px;
+  }
+  /* ---------------------------------- */
+  /* -------------COOKIE--------------- */
+  /* ---------------------------------- */
+  .cookie {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    color: rgb(199, 21, 133);
+    width: 100%;
+    height: 40px;
+    padding-top: 20px;
+    padding-left: 25px;
+    background-color: rgb(11, 8, 35);
+    z-index: 1;
+    font-family: "rubik";
+    font-weight: bold;
+    font-size: 13px;
+  }
+  /* Page-2 ACCEPT */
+  .accept {
+    display: block;
+    position: fixed;
+    bottom: 25px;
+    width: 4%;
+    height: 2%;
+    z-index: 2;
+    right: 45px;
+  }
+  /* Page-2 ACCEPT-TEXT */
+  .accept-text {
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 7px;
+    color: white;
+    background-color: rgb(15, 15, 107);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: "rubik";
+  }
+}
+/* ---------------------------------- */
+/* -------------BUTTON-------------- */
+/* ---------------------------------- */
+button {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 0;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+input {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+}
+
+input:checked + .menu Button span {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+input:checked + .menu button span:nth-child(2) {
+  opacity: 0;
+}
+
+input:checked + .menu button span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+input:checked + .menu button span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  visibility: hidden;
+}
+
+input:checked + .menu nav {
+  visibility: visible;
+  opacity: 0.8;
+  background-color: aliceblue;
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+li:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgb(199, 21, 133);
+          text-decoration-color: rgb(199, 21, 133);
+  text-decoration-thickness: 4.5px;
+}/*# sourceMappingURL=style.css.map */
